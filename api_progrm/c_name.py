@@ -2,7 +2,9 @@ import json
 import urllib2
 
 def get_weather_details():
+	
 	name = raw_input('Enter the city name: ')
+	
 	weather_api = '9d41bd4e5bffd04e03a6cb6832066559'
 
 	weather_url = 'http://api.openweathermap.org/data/2.5/weather?q='+name+'&appid='+weather_api
