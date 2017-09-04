@@ -26,20 +26,25 @@ def get_weather_details():
 	temperature = json_open_w['main']['temp']
 	celsius = temperature - 273
 	farenheit = celsius * 9/5 + 32
-	print '#################################################'
-	print
-	print '\tRegion: %s' %json_open_w['name']
-	print '\tWeather Description: %s' %json_open_w['weather'][0]['description']
-	print '\tTemperature in Celsius: %s C' %celsius
-	print '\tTemperature in Farenheit: %s F' %farenheit
-	print '\tHumidity: %s' %json_open_w['main']['humidity']
-	print '\tWind Speed: %s' %json_open_w['wind']['speed']
-	print '\tPressure: %s pascals' %json_open_w['main']['pressure']
-	print '\tTotal Clouds: %s' %json_open_w['clouds']['all']
-	print '\tCountry: %s' %json_open_w['sys']['country']
-	print
-	print '#################################################'
-	print
+	try:
+		print '#################################################'
+		print
+		print '\tRegion: %s' %json_open_w['name']
+		print '\tWeather Description: %s' %json_open_w['weather'][0]['description']
+		print '\tTemperature in Celsius: %s C' %celsius
+		print '\tTemperature in Farenheit: %s F' %farenheit
+		print '\tHumidity: %s' %json_open_w['main']['humidity']
+		print '\tWind Speed: %s' %json_open_w['wind']['speed']
+		print '\tPressure: %s pascals' %json_open_w['main']['pressure']
+		print '\tTotal Clouds: %s' %json_open_w['clouds']['all']
+		print '\tCountry: %s' %json_open_w['sys']['country']
+		print
+		print '#################################################'
+		print
+	except KeyError:
+		print
+		print('\tWARNING \n\tsomething wrong with the deatils of the location')
+		print
 	return None
 	
 get_weather_details()
