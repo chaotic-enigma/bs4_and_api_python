@@ -30,8 +30,8 @@ def get_weather_details():
 	print
 	print '\tRegion: %s' %json_open_w['name']
 	print '\tWeather Description: %s' %json_open_w['weather'][0]['description']
-	print '\tTemperature in Celsius: %s' %celsius
-	print '\tTemperature in Farenheit: %s' %farenheit
+	print '\tTemperature in Celsius: %s C' %celsius
+	print '\tTemperature in Farenheit: %s F' %farenheit
 	print '\tHumidity: %s' %json_open_w['main']['humidity']
 	print '\tWind Speed: %s' %json_open_w['wind']['speed']
 	print '\tPressure: %s pascals' %json_open_w['main']['pressure']
