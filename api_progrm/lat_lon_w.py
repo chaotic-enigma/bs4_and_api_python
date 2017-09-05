@@ -26,7 +26,7 @@ def get_weather_details():
 		print '\tTemperature in Celsius: %s C' %celsius
 		print '\tTemperature in Farenheit: %s F' %farenheit
 		print '\tHumidity: %s' %json_open_w['main']['humidity']
-		print '\tWind Speed: %s' %json_open_w['wind']['speed']
+		print '\tWind Speed: %s mph' %json_open_w['wind']['speed']
 		print '\tPressure: %s pascals' %json_open_w['main']['pressure']
 		print '\tTotal Clouds: %s' %json_open_w['clouds']['all']
 		print '\tCountry: %s' %json_open_w['sys']['country']
